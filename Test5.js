@@ -12,9 +12,9 @@ var myVar = condition1? 'something other than default' : null
 function stringTest(str)
 {
 	var x = 'C';
-	
+
 	var y = 'A';
-	
+
 	for(var i = 0; i < str.length; i++)
 	{
 		if(str[0] == x)
