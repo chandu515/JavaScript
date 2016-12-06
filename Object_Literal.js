@@ -5,3 +5,4 @@ var person = {
     console.log("Value of a = " + (a * 10));
     }
 }
+var firstName = person['name'];
