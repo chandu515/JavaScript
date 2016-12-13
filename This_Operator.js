@@ -25,17 +25,38 @@ dimension.setHeight = height(h);
 dimension.setWidth = width(w);
 
 // ------------------------------
+var parameter = function(par)
+{
+  this.parameter = par * 4;
+};
+
+var area = function(ar)
+{
+  this.area = ar * ar;
+};
+
 var square = new Object();
-square.parameter = parameter;
-square.area = area;
+square.parameter = 10;
+square.area = 20;
 
-square.length = 10;
-square.parameter = function()
-{
-   return this.length * 4 ;
+square.par = parameter;
+square.ar = area;
+
+//-------------------------------
+var rectangle = new Object();
+rectangle.height = 3;
+rectangle.width = 4;
+// here is our method to set the height
+var setHeight = function (newHeight) {
+  this.height = newHeight * 4;
 };
 
-var area = function(area)
-{
-  return this.area1;
+var setWidth = function (newWidth) {
+  this.width = newWidth * 4;
 };
+
+// here change the width to 8 and height to 6 using our new methods
+rectangle.setHeight = setHeight;
+rectangle.setWidth =  setWidth;
+var a = rectangle.setHeight(6);
+ var b = rectangle.setWidth(8);
